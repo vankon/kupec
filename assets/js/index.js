@@ -1,4 +1,4 @@
-﻿Main = function () {
+﻿var Main = function () {
     var initNavi = function () {
         $(".toggle-dd").on('click', function (e) {
             e.preventDefault();
