@@ -1,0 +1,72 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: $font;
+  color: $color-text;
+  font-size: 14px;
+  line-height: 1.4;
+  overflow-x: hidden;
+
+  .body-overlay {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    transition: opacity 0.3s ease 0s;
+    width: 100%;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &.menu-opened {
+    .body-overlay {
+      cursor: pointer;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      z-index: 1800;
+    }
+  }
+}
+
+.container {
+  max-width: $container-width;
+  width: 100%;
+}
+
+.main {
+  min-height: calc(100vh - 655px);
+  margin-bottom: 40px;
+  padding-top: 40px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  outline: none !important;
+}
+
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+button {
+  outline: none !important;
+  box-shadow: none !important;
+}

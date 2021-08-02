@@ -1,0 +1,166 @@
+@mixin myborder($height: 8px, $url: "../images/border.png", $pos: "after") {
+  @if $pos=="after" {
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: $height;
+      bottom: -($height / 2);
+      left: 0;
+      background: url($url) 0 0 repeat-x;
+      z-index: 10;
+    }
+  }
+
+  @else {
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: $height;
+      top: -($height / 2);
+      left: 0;
+      background: url($url) 0 0 repeat-x;
+      z-index: 10;
+    }
+  }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content
+  }
+
+  &:-moz-placeholder {
+    @content
+  }
+
+  &::-moz-placeholder {
+    @content
+  }
+
+  &:-ms-input-placeholder {
+    @content
+  }
+}
+
+@mixin linearGradient($top, $bottom) {
+  background: $top;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, $top 0%, $bottom 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $top 0%, $bottom 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $top 0%, $bottom 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $top 0%, $bottom 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, $top 0%, $bottom 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000', GradientType=0);
+  /* IE6-9 */
+}
+
+@mixin line {
+  width: 34px;
+  height: 3px;
+  background: #fff;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes anim {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+    transform: translate(0, -5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+
+@-webkit-keyframes logoHourse {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-12deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(12deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes logoHourse {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-12deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(12deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@mixin circle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  margin: 0 15px 15px;
+  border-radius: 50%;
+  box-shadow: 0 14px 16px 0 rgba(0, 0, 0, 0.25);
+  border: none;
+  background: $color-primary;
+  color: #e7e7e7;
+  font-size: 20px;
+  text-decoration: none;
+  transition: .3s;
+  user-select: none;
+
+  &:hover {
+    background: darken($color-primary, 10%);
+  }
+}

@@ -1,0 +1,42 @@
+// Fonts:
+$font: 'Montserrat', sans-serif;
+
+//	Colors:
+$color-primary: #0b63bc;
+$color-primary-dark: darken($color-primary, 10%);
+$color-green: #94c11e;
+$color-green-dark: darken($color-green, 10%);
+$color-blue: #009ee1;
+$color-red: #ed1b2f;
+$color-dark: #051537;
+$color-text: #3b474c;
+$color-background: #fff;
+$gradient-primary: linear-gradient(90deg, $color-primary 0%, darken($color-primary, 10%) 100%);
+
+$container-width: 1315px;
+$header-height: 96px;
+
+//	Media Queries:
+$big-desktop: 1400px;
+$small-desktop: 1200px;
+$tablet: 992px;
+$mobile: 767px;
+$small-mobile: 480px;
+
+// Media step breakpoint mixin based on Angular Material lib
+$breakpoints: (xs: 'screen and (max-width: 766px)', sm: 'screen and (min-width: 767px) and (max-width: 991px)', md: 'screen and (min-width: 992px) and (max-width: 1199px)', lg: 'screen and (min-width: 1200px) and (max-width: 1919px)', xl: 'screen and (min-width: 1920px) and (max-width: 5000px)', lt-sm: 'screen and (max-width: 766px)', lt-md: 'screen and (max-width: 991px)', lt-lg: 'screen and (max-width: 1199px)', lt-xl: 'screen and (max-width: 1919px)', gt-xs: 'screen and (min-width: 767px)', gt-sm: 'screen and (min-width: 992px)', gt-md: 'screen and (min-width: 1200px)', gt-lg: 'screen and (min-width: 1920px)') !default;
+
+@mixin media-breakpoint($breakpointName) {
+
+    $mediaQuery: map-get($breakpoints, $breakpointName);
+
+    @if ($mediaQuery==null) {
+        @content
+    }
+
+    @else {
+        @media #{$mediaQuery} {
+            @content
+        }
+    }
+}
