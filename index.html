@@ -20,7 +20,7 @@
   <header class="header">
     <div class="container">
       <div class="header__inner">
-        <nav>
+        <nav class="navi">
           <ul>
             <li><a href="#">Купленные часы</a></li>
             <li><a href="#">Скупка</a></li>
@@ -28,32 +28,40 @@
           </ul>
         </nav>
         <a href="#" class="logo"><img src="assets/images/logo.png" alt=""></a>
-        <div class="dropdown">
-          <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            <span data-type="value">Москва</span>
-            <i class="fa fa-angle-down"></i>
-          </button>
-          <div class="dropdown-menu">
-            <a href="#">Москва</a>
-            <a href="#">Санкт-Петербург</a>
+        <div class="header-contacts">
+          <div class="dropdown">
+            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <span data-type="value">Москва</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item active" href="#" data-element="dropdownItem" data-value="1">
+                Москва
+              </a>
+              <a class="dropdown-item" href="#" data-element="dropdownItem" data-value="2">
+                Санкт-Петербург
+              </a>
+            </div>
           </div>
+          <a class="link-call" href="#">Обратный звонок</a>
+          <a class="link-tel" href="tel:79284109070">+79284109070</a>
         </div>
-        <a href="#">Обратный звонок</a>
-        <a href="tel:79284109070">+79284109070</a>
       </div>
     </div>
   </header>
   <div class="sl">
     <div class="container">
-      <div class="sl__info">
-        <div class="h2">Выкуп часов в любом состоянии</div>
-        <p>Мы покупаем дороже часовых Ломбардов,потому-то являемся международной компанией и реализуем часы  в странах с
-          более высокой покупательной способностью.</p>
-        <a href="#">Онлайн-оценка</a>
-      </div>
-      <div class="sl__img">
-        <img src="demo/sl1.png" alt="">
+      <div class="sl-content">
+        <div class="sl-content__info">
+          <div class="h2">Выкуп часов в любом состоянии</div>
+          <p>Мы покупаем дороже часовых Ломбардов,потому-то являемся международной компанией и реализуем часы в странах
+            с
+            более высокой покупательной способностью.</p>
+          <a href="#">Онлайн-оценка</a>
+        </div>
+        <div class="sl-content__img">
+          <img src="demo/sl1.png" alt="">
+        </div>
       </div>
     </div>
   </div>

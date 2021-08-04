@@ -1,5 +1,97 @@
 .header {
     &__inner {
+        padding: 7px 0 11px 0;
         display: flex;
+        align-items: center;
+    }
+
+    &-contacts {
+        display: flex;
+        align-items: center;
+
+        a {
+            margin-left: 40px;
+        }
+    }
+
+    a {
+        font-size: 17px;
+        font-weight: 300;
+        color: #333;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .dropdown {
+        &-toggle {
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            font-size: 17px;
+            font-weight: 300;
+            color: #333;
+
+            &:after {
+                transition: .3s;
+                top: 1px;
+                margin-left: 0;
+                position: relative;
+                font-size: .9rem;
+            }
+        }
+
+        &-menu {
+            padding: 0;
+
+            .dropdown-item {
+                display: block;
+                margin: 0;
+                padding: .5rem 1rem;
+                transition: .3s;
+
+                &.active {
+                    background: $color-primary;
+                    color: #fff;
+                    cursor: default;
+                }
+
+                &:hover {
+                    background: $color-primary;
+                    color: #fff;
+                }
+            }
+        }
+
+        &.show {
+            .dropdown-toggle {
+                &:after {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
+.navi {
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-right: 40px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            a {
+                text-transform: uppercase;
+            }
+        }
     }
 }
