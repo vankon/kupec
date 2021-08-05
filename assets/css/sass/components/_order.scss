@@ -5,7 +5,11 @@
         background: #fff;
         border-radius: 30px;
         width: 540px;
-        padding: 20px;
+        padding: 1rem;
         margin: -8.25rem auto 4rem auto;
+
+        @include media-breakpoint('lt-sm') {
+            width: 100%;
+        }
     }
 }

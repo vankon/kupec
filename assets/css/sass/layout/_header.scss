@@ -3,11 +3,25 @@
         padding: 7px 0 11px 0;
         display: flex;
         align-items: center;
+
+        @include media-breakpoint('lt-lg') {
+            flex-direction: column;
+        }
     }
 
     &-contacts {
         display: flex;
         align-items: center;
+
+        @include media-breakpoint('lt-lg') {
+            order: 2;
+        }
+
+        @include media-breakpoint('lt-sm') {
+            .link-call {
+                display: none;
+            }
+        }
 
         a {
             margin-left: 40px;
@@ -22,6 +36,11 @@
 
     .logo {
         margin: 0 auto;
+
+        @include media-breakpoint('lt-lg') {
+            order: 0;
+            margin-bottom: 2rem;
+        }
     }
 
     .dropdown {
@@ -49,6 +68,14 @@
             color: $color-text;
         }
     }
+
+    .navi {
+
+        @include media-breakpoint('lt-lg') {
+            order: 1;
+            margin-bottom: 1rem;
+        }
+    }
 }
 
 .navi {
@@ -58,8 +85,17 @@
         padding: 0;
         margin: 0;
 
+        @include media-breakpoint('lt-sm') {
+            display: block;
+            text-align: center;
+        }
+
         li {
             margin-right: 40px;
+
+            @include media-breakpoint('lt-sm') {
+                margin: 0 0 .5rem 0;
+            }
 
             &:last-of-type {
                 margin-right: 0;

@@ -10,6 +10,10 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 
+  @include media-breakpoint('lt-sm') {
+    font-size: 16px;
+  }
+
   .body-overlay {
     content: "";
     background-color: rgba(0, 0, 0, 0.6);

@@ -8,11 +8,32 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include media-breakpoint('lt-md') {
+            flex-direction: column;
+        }
     }
 
     &-contacts {
         padding-left: 7rem;
         flex: 1 0 40%;
+
+        @include media-breakpoint('lt-md') {
+            flex: 0 0 100%;
+            padding-left: 0;
+            order: 2;
+            text-align: center;
+
+            >a {
+                margin: 0 1rem;
+            }
+        }
+
+        @include media-breakpoint('lt-sm') {
+            .link-call {
+                display: none;
+            }
+        }
 
         p {
             font-size: 17px;
@@ -33,9 +54,19 @@
     .logo {
         flex: 0 0 210px;
         margin: 0 auto;
+
+        @include media-breakpoint('lt-md') {
+            order: 0;
+            margin-bottom: 1rem;
+            flex: 0 0 auto;
+        }
     }
 
     .dropdown {
+        @include media-breakpoint('lt-md') {
+            margin-bottom: .5rem;
+        }
+
         &-toggle {
             background: none;
             border: none;
@@ -46,6 +77,10 @@
             font-weight: 300;
             color: #fff;
             display: inline-block;
+
+            @include media-breakpoint('lt-md') {
+                text-align: center;
+            }
 
             &:after {
                 transition: .3s;
@@ -64,11 +99,31 @@
     .navi {
         flex: 1 0 40%;
 
+        @include media-breakpoint('lt-md') {
+            flex: 0 0 100%;
+            order: 1;
+            margin-bottom: 1rem;
+        }
+
         ul {
             display: block;
 
+            @include media-breakpoint('lt-md') {
+                display: flex;
+                align-items: center;
+            }
+
+            @include media-breakpoint('lt-sm') {
+                display: block;
+                text-align: center;
+            }
+
             li {
                 margin: 0 0 1rem 0;
+
+                @include media-breakpoint('lt-md') {
+                    margin: 0 1rem;
+                }
 
                 &:last-of-type {
                     margin-bottom: 0;

@@ -1,26 +1,39 @@
 .sl {
     background: #222;
     color: #fff;
-    padding: 124px 0 204px 0;
+    padding: 6rem 0 10rem 0;
+
+    @include media-breakpoint('lt-md') {
+        padding: 4rem 0 10rem 0;
+    }
 
     &-content {
         display: flex;
         justify-content: space-between;
 
+        @include media-breakpoint('lt-md') {
+            display: block;
+        }
+
         &__info {
-            padding-top: 40px;
+            padding-top: 2rem;
             max-width: 640px;
 
+            @include media-breakpoint('lt-md') {
+                max-width: 100%;
+                margin-bottom: 2rem;
+            }
+
             .h2 {
-                font-size: 3rem;
+                font-size: 3em;
                 font-weight: 600;
-                margin: 0 0 30px 0;
+                margin: 0 0 1.5rem 0;
             }
 
             p {
                 line-height: 1.6;
                 font-weight: 500;
-                margin: 0 0 40px 0;
+                margin: 0 0 2rem 0;
             }
 
             a {
@@ -28,7 +41,7 @@
                 border: 1px solid #fff;
                 border-radius: 20px;
                 display: inline-block;
-                padding: 15px 40px;
+                padding: .75rem 2rem;
                 color: #fff;
                 text-decoration: none;
                 transition: .3s;
@@ -47,8 +60,17 @@
         &__img {
             margin-right: -100px;
 
+            @include media-breakpoint('lt-md') {
+                margin: 0 auto;
+                text-align: center;
+            }
+
             img {
                 width: 744px;
+
+                @include media-breakpoint('lt-md') {
+                    width: auto;
+                }
             }
         }
     }
