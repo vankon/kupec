@@ -31,8 +31,10 @@
             padding: 0;
             margin: 0;
             font-size: 17px;
+            line-height: 2;
             font-weight: 300;
             color: #333;
+            display: inline-block;
 
             &:after {
                 transition: .3s;
@@ -43,34 +45,8 @@
             }
         }
 
-        &-menu {
-            padding: 0;
-
-            .dropdown-item {
-                display: block;
-                margin: 0;
-                padding: .5rem 1rem;
-                transition: .3s;
-
-                &.active {
-                    background: $color-primary;
-                    color: #fff;
-                    cursor: default;
-                }
-
-                &:hover {
-                    background: $color-primary;
-                    color: #fff;
-                }
-            }
-        }
-
-        &.show {
-            .dropdown-toggle {
-                &:after {
-                    transform: rotate(180deg);
-                }
-            }
+        a {
+            color: $color-text;
         }
     }
 }

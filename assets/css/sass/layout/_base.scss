@@ -6,8 +6,8 @@ body {
 body {
   font-family: $font;
   color: $color-text;
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 20px;
+  line-height: 1.6;
   overflow-x: hidden;
 
   .body-overlay {
@@ -69,4 +69,15 @@ textarea {
 button {
   outline: none !important;
   box-shadow: none !important;
+}
+
+.section-heading {
+  font-size: 1.85em;
+  font-size: 500;
+  margin: 0 0 1.75rem 0;
+
+  strong {
+    font-weight: 500;
+    color: $color-primary;
+  }
 }

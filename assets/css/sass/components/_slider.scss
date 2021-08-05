@@ -2,4 +2,54 @@
     background: #222;
     color: #fff;
     padding: 124px 0 204px 0;
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+
+        &__info {
+            padding-top: 40px;
+            max-width: 640px;
+
+            .h2 {
+                font-size: 3rem;
+                font-weight: 600;
+                margin: 0 0 30px 0;
+            }
+
+            p {
+                line-height: 1.6;
+                font-weight: 500;
+                margin: 0 0 40px 0;
+            }
+
+            a {
+                font-weight: 500;
+                border: 1px solid #fff;
+                border-radius: 20px;
+                display: inline-block;
+                padding: 15px 40px;
+                color: #fff;
+                text-decoration: none;
+                transition: .3s;
+
+                &:hover {
+                    color: $color-primary;
+                }
+
+                &:active,
+                &:focus {
+                    color: darken($color-primary, 10%);
+                }
+            }
+        }
+
+        &__img {
+            margin-right: -100px;
+
+            img {
+                width: 744px;
+            }
+        }
+    }
 }
