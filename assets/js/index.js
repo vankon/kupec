@@ -10,15 +10,22 @@
                 $('.navi').removeClass('active');
             }
         });
-
-		$('.navi-scroll a').on('click', function (e) {
-			var target = $(this).attr('href');
-			$("html, body").animate({
-				scrollTop: $(target).offset().top - 60
-			}, "slow");
-			e.preventDefault();
-		});  
     };
+
+    var catalogSwiper = new Swiper('.product-swiper', {
+        slidesPerView: 4,
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: false,
+            draggable: false,
+            dragSize: 42
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        mousewheel: false
+    });
 
     return {
         init: function () {
