@@ -21,18 +21,35 @@
     };
 
     var catalogSwiper = new Swiper('.product-swiper', {
-        slidesPerView: 4,
         scrollbar: {
             el: '.swiper-scrollbar',
             hide: false,
-            draggable: false,
-            dragSize: 42
+            draggable: true,
+            dragSize: 90
         },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        mousewheel: false
+        mousewheel: false,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+              slidesPerView: 1
+            },
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 2
+            },
+            // when window width is >= 980px
+            980: {
+              slidesPerView: 3
+            },
+            // when window width is >= 1200px
+            1200: {
+              slidesPerView: 4
+            }
+          }
     });
 
     return {
