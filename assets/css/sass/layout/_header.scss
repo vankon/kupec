@@ -9,19 +9,33 @@
         @include media-breakpoint('lt-lg') {
             flex-direction: column;
         }
+
+        @include media-breakpoint('lt-sm') {
+            flex-direction: row;
+        }
     }
 
     &-contacts {
+        order: 2;
         display: flex;
         align-items: center;
 
         @include media-breakpoint('lt-lg') {
             order: 2;
+
+            .link-call {
+                display: none;
+            }
         }
 
         @include media-breakpoint('lt-sm') {
-            .link-call {
-                display: none;
+            order: 1;
+            margin: 0 1rem;
+            flex: 1 1 auto;
+            justify-content: center;
+
+            .link-tel {
+                margin-left: 0;
             }
         }
 
@@ -37,15 +51,28 @@
     }
 
     .logo {
+        order: 1;
         margin: 0 auto;
 
         @include media-breakpoint('lt-lg') {
             order: 0;
             margin-bottom: 2rem;
         }
+
+        @include media-breakpoint('lt-sm') {
+            margin: 0;
+
+            img {
+                max-width: 80px;
+            }
+        }
     }
 
     .dropdown {
+        @include media-breakpoint('lt-sm') {
+            display: none;
+        }
+
         &-toggle {
             background: none;
             border: none;
@@ -72,11 +99,28 @@
     }
 
     .navi {
+        order: 0;
 
         @include media-breakpoint('lt-lg') {
             order: 1;
             margin-bottom: 1rem;
         }
+
+        @include media-breakpoint('lt-sm') {
+            margin: 0 0 0 auto;
+        }
+
+        ul {
+            @include media-breakpoint('lt-sm') {
+                display: none;
+            }
+        }
+    }
+
+    .menu-toggle {
+        width: 32px;
+        position: relative;
+        top: -2px;
     }
 }
 
@@ -106,6 +150,164 @@
             a {
                 text-transform: uppercase;
             }
+        }
+    }
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    display: none;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+
+    @include media-breakpoint('lt-sm') {
+        display: block;
+    }
+
+    .lines {
+        @include line;
+        display: inline-block;
+        margin: 0 5px 0 0;
+        top: -3px;
+        position: relative;
+
+        &:before,
+        &:after {
+            @include line;
+            position: absolute;
+            left: 0;
+            content: '';
+            transform-origin: 4px center;
+        }
+
+        &:before {
+            top: 7px;
+        }
+
+        &:after {
+            top: -7px;
+        }
+    }
+}
+
+.mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    transition: .3s;
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(#000, .3);
+        transition: .3s;
+    }
+
+    @include media-breakpoint('lt-sm') {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 999999;
+    }
+
+    &-menu {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+        width: 80%;
+        width: calc(100% - 60px);
+        overflow: hidden;
+        background-color: #333;
+        padding: 2rem;
+        transition: .3s;
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .navi {
+        ul {
+            text-align: left;
+        }
+
+        a {
+            display: block;
+            color: #fff;
+            font-size: 1.1em;
+            margin-bottom: .5rem;
+        }
+    }
+
+    .menu-toggle {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        background: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-100%);
+        transition: .3s;
+
+        .lines {
+            background: transparent;
+            margin-right: 5px;
+
+            &:before,
+            &:after {
+                transform-origin: 50% 50%;
+                top: 0;
+                width: 28px;
+            }
+
+            &:before {
+                transform: rotate3d(0, 0, 1, 45deg);
+            }
+
+            &:after {
+                transform: rotate3d(0, 0, 1, -45deg);
+            }
+        }
+    }
+}
+
+.menu-active {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+
+    .mobile-overlay {
+        opacity: 1;
+        visibility: visible;
+
+        &:after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+        }
+
+        .menu-toggle {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
         }
     }
 }

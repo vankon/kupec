@@ -1,8 +1,20 @@
 .product {
     display: flex;
 
+    @include media-breakpoint('lt-sm') {
+        display: block;
+    }
+
     &__image {
         flex: 0 0 390px;
+
+        @include media-breakpoint('lt-md') {
+            flex: 0 0 240px;
+        }
+
+        @include media-breakpoint('lt-sm') {
+            margin-bottom: 2rem;
+        }
 
         img {
             width: 100%;
@@ -11,7 +23,11 @@
 
     &__main {
         flex: 1 1 auto;
-        padding-left: 1rem;
+        margin-left: 1rem;
+
+        @include media-breakpoint('lt-sm') {
+            margin-left: 0;
+        }
     }
 
     .product {

@@ -5,6 +5,10 @@
     .section-heading {
         color: #fff;
         margin: 0 0 2.5rem 0;
+
+        @include media-breakpoint('lt-md') {
+            margin-bottom: 1.25rem;
+        }
     }
 
     &__text {
@@ -46,6 +50,10 @@
 .reviews {
     margin-bottom: 6rem;
 
+    @include media-breakpoint('lt-sm') {
+        margin-bottom: 4rem;
+    }
+
     &-list {
         display: flex;
         flex-wrap: wrap;
@@ -68,10 +76,20 @@
             margin: 0 0 2rem 0;
         }
 
+        @include media-breakpoint('lt-sm') {
+            display: block;
+        }
+
         &__img {
             width: 100px;
             margin-right: 1.5rem;
             text-align: center;
+
+            @include media-breakpoint('lt-sm') {
+                margin-right: 0;
+                margin-bottom: 1rem;
+                text-align: left;
+            }
 
             .image-circle {
                 width: 100px;
@@ -101,6 +119,15 @@
         &-item {
             flex: 0 0 calc(25% - 2rem);
             margin: 0 1rem 2rem 1rem;
+
+            @include media-breakpoint('lt-md') {
+                flex: 0 0 calc(50% - 2rem);
+            }
+
+            @include media-breakpoint('lt-sm') {
+                flex: 0 0 100%;
+                margin: 0 0 2rem 0;
+            }
         }
     }
 }

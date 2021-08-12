@@ -43,6 +43,10 @@ body {
 
 .main {
   min-height: calc(100vh - 246px);
+
+  @include media-breakpoint('lt-md') {
+    min-height: calc(100vh - 580px);
+  }
 }
 
 img {
@@ -72,10 +76,19 @@ button {
   padding: 4rem 0;
   margin-bottom: 6rem;
 
+  @include media-breakpoint('lt-md') {
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+  }
+
   &-heading {
     font-size: 1.85em;
     font-weight: 500;
     margin: 0 0 1.75rem 0;
+
+    @include media-breakpoint('lt-sm') {
+      font-size: 1.5em;
+    }
 
     strong {
       font-weight: 500;
