@@ -1,12 +1,11 @@
 .order {
-    padding-bottom: 4rem;
 
     .form-horizontal {
         background: #fff;
         border-radius: 30px;
         width: 540px;
         padding: 1rem;
-        margin: -8.25rem auto 4rem auto;
+        margin-bottom: 6rem;
 
         @include media-breakpoint('lt-sm') {
             width: 100%;

@@ -43,6 +43,7 @@ body {
 
 .main {
   min-height: calc(100vh - 246px);
+  padding-top: $header-height;
 
   @include media-breakpoint('lt-md') {
     min-height: calc(100vh - 580px);
