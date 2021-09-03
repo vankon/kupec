@@ -1,11 +1,41 @@
 ﻿var Main = function () {
     var initNavi = function () {
+        const $header = $('.header'),
+            scrollTop = $(".scroll-top"),
+            stickyHeader = $('.header');
+
+        let lastScrollTop = 0;
+
+        $(window).on('scroll', function () {
+            const st = $(this).scrollTop();
+            if (st < lastScrollTop) {
+                $header.addClass('scroll-up');
+            }
+            else {
+                $header.removeClass('scroll-up');
+            }
+
+            if (st > 200) {
+                scrollTop.addClass('shown');
+                stickyHeader.addClass('sticky');
+            } else {
+                scrollTop.removeClass('shown');
+                stickyHeader.removeClass('sticky');
+            }
+
+            lastScrollTop = st;
+        });
+
+        scrollTop.on('click', function () {
+            $('html, body').animate({ scrollTop: 0 }, 500);
+            return false;
+        });
+
         $(".menu-toggle").on('click', function (e) {
             e.preventDefault();
             $('body').toggleClass('menu-active');
         });
         $(document).on('click', function (event) {
-            console.log($(event.target).closest('.menu-toggle'))
             if (!$(event.target).closest('.mobile-overlay-menu').length && !$(event.target).closest('.menu-toggle').length) {
                 $('body').removeClass('menu-active');
             }
@@ -35,21 +65,21 @@
         breakpoints: {
             // when window width is >= 320px
             320: {
-              slidesPerView: 1
+                slidesPerView: 1
             },
             // when window width is >= 640px
             640: {
-              slidesPerView: 2
+                slidesPerView: 2
             },
             // when window width is >= 980px
             980: {
-              slidesPerView: 3
+                slidesPerView: 3
             },
             // when window width is >= 1200px
             1200: {
-              slidesPerView: 4
+                slidesPerView: 4
             }
-          }
+        }
     });
 
     return {

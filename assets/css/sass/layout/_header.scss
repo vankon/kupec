@@ -4,6 +4,15 @@
     z-index: 100;
     width: 100%;
     height: $header-height;
+    transition: .3s;
+
+    &.sticky {
+        transform: translateY(-100%) translateZ(0);
+    }
+
+    &.scroll-up {
+        transform: translateY(0) translateZ(0);
+    }
 
     &__inner {
         padding: 7px 0;
@@ -26,7 +35,7 @@
             flex: 1 1 auto;
             justify-content: center;
         }
-        
+
         @include media-breakpoint('lt-md') {
             .link-call {
                 display: none;
@@ -64,7 +73,7 @@
 
     .dropdown {
         @include media-breakpoint('lt-md') {
-                display: none;
+            display: none;
         }
 
         &-toggle {
