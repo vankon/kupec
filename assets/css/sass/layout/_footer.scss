@@ -2,6 +2,10 @@
     background: #222;
     padding: 1.5rem 0;
 
+    @include media-breakpoint('lt-lg') {
+        padding-bottom: 6rem;
+    }
+
     &__inner {
         max-width: 860px;
         margin: 0 auto;
@@ -54,6 +58,10 @@
     .logo {
         flex: 0 0 210px;
         margin: 0 auto;
+
+        img {
+            max-width: 140px;
+        }
 
         @include media-breakpoint('lt-md') {
             order: 0;

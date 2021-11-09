@@ -200,7 +200,7 @@
 .sl {
   background: #222;
   color: #fff;
-  padding: 6rem 0;
+  padding: 9rem 0 6rem 0;
 }
 
 @media screen and (max-width: 991px) {
@@ -296,11 +296,18 @@
   }
 }
 
+.order {
+  padding: 3rem 0 0;
+}
+
+.order .section-heading {
+  margin-bottom: 3rem;
+}
+
 .order .form-horizontal {
   background: #fff;
   border-radius: 30px;
-  width: 540px;
-  padding: 1rem;
+  max-width: 540px;
   margin-bottom: 6rem;
 }
 
@@ -308,6 +315,54 @@
   .order .form-horizontal {
     width: 100%;
   }
+}
+
+.order-slogan {
+  margin-right: 5rem;
+}
+
+@media screen and (max-width: 991px) {
+  .order-slogan {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+.order-slogan__text {
+  margin-bottom: 2rem;
+}
+
+.order-slogan__image {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+@media screen and (max-width: 1199px) {
+  .order-slogan__image {
+    max-width: 480px;
+  }
+}
+
+.order-slogan__image span {
+  flex: 0 0 30%;
+  display: block;
+  background-size: contain;
+}
+
+.order-slogan__image span img {
+  width: 100%;
+  height: auto;
+}
+
+.form-heading {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
 
 .btn-primary {
@@ -544,7 +599,13 @@
 .post ul,
 .post ol {
   margin: 0 0 1.25rem 0;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 24px;
+  overflow-y: auto;
+}
+
+.post ul li,
+.post ol li {
+  margin: 0 0 .25rem 0;
 }
 
 .post ul li::marker {
@@ -553,9 +614,28 @@
 }
 
 .post .h2 {
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-weight: 600;
-  margin: 0 0 .5rem 0;
+  margin: 0 0 1rem 0;
+}
+
+.post h1,
+.post h2,
+.post h3,
+.post h4 {
+  margin: .5rem 0 1rem 0;
+}
+
+.post h2 {
+  font-size: 1.5em;
+}
+
+.post h3 {
+  font-size: 1.25em;
+}
+
+.post h4 {
+  font-size: 1.1em;
 }
 
 .post .text-block {
@@ -564,6 +644,24 @@
 
 .post .text-block:last-of-type {
   margin-bottom: 0;
+}
+
+.post img {
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 991px) {
+  .post img {
+    display: block;
+    height: auto !important;
+    margin: 0 auto 2rem auto !important;
+    padding: 0 !important;
+    float: none !important;
+  }
+}
+
+.section-text .post {
+  max-width: 100%;
 }
 
 .product-item {
@@ -624,6 +722,61 @@
 
 .product-item__body p {
   margin-bottom: .5rem;
+}
+
+#sticky-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #d3d3d3;
+  transition: .3s;
+  z-index: 90;
+  transform: translateY(100%);
+}
+
+#sticky-bar .intro-messenger-link {
+  margin: 0 .25rem;
+  padding: .25rem .5rem;
+  transition: background-color .3s;
+  text-align: center;
+  color: #b980d1;
+  text-decoration: none;
+  position: relative;
+}
+
+#sticky-bar .intro-messenger-link svg {
+  width: 36px;
+  height: 36px;
+}
+
+#sticky-bar .intro-messenger-link path {
+  fill: #b980d1 !important;
+}
+
+#sticky-bar .intro-messenger-link span {
+  display: block;
+  font-size: .8em;
+}
+
+#sticky-bar .intro-messenger-link:hover {
+  color: #fff;
+  background: #b980d1;
+}
+
+#sticky-bar .intro-messenger-link:hover path {
+  fill: #fff !important;
+}
+
+@media screen and (max-width: 1199px) {
+  #sticky-bar.sticky-bar--active {
+    transform: none;
+  }
 }
 
 body {
@@ -732,6 +885,71 @@ button {
   color: #b980d1;
 }
 
+.btn-info {
+  width: auto;
+  height: auto;
+  background: none !important;
+  color: #b980d1;
+  border: none;
+  line-height: 1;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: .5rem;
+  position: relative;
+  bottom: -7px;
+}
+
+.btn-info:hover {
+  color: #af6dca;
+}
+
+.btn-info:active, .btn-info:focus {
+  color: #9a48bd !important;
+}
+
+.modal#form_info .modal-dialog {
+  max-width: 960px;
+}
+
+.modal .modal-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.modal .btn-close {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  height: 32px;
+  width: 32px;
+  transition: .3s;
+  margin-top: -15px;
+}
+
+.modal .btn-close:hover {
+  transform: rotate(14deg);
+}
+
+.modal .btn-close:before, .modal .btn-close:after {
+  content: "";
+  display: block;
+  height: 32px;
+  width: 1px;
+  background: #000;
+  position: absolute;
+  left: 15px;
+}
+
+.modal .btn-close:before {
+  transform: rotate(45deg);
+}
+
+.modal .btn-close:after {
+  transform: rotate(-45deg);
+}
+
 .header {
   background: #fff;
   position: fixed;
@@ -743,6 +961,10 @@ button {
 
 .header.sticky {
   transform: translateY(-100%) translateZ(0);
+}
+
+.header.sticky .logo img {
+  max-width: 120px;
 }
 
 .header.scroll-up {
@@ -758,6 +980,7 @@ button {
 @media screen and (max-width: 1199px) {
   .header__inner {
     flex-direction: row;
+    padding: 10px 0;
   }
 }
 
@@ -800,13 +1023,18 @@ button {
   margin: 0 auto;
 }
 
+.header .logo img {
+  transition: .3s;
+  max-width: 140px;
+}
+
 @media screen and (max-width: 1199px) {
   .header .logo {
     margin: 0;
     order: 0;
   }
   .header .logo img {
-    max-width: 80px;
+    max-width: 105px !important;
   }
 }
 
@@ -1059,6 +1287,12 @@ button {
   padding: 1.5rem 0;
 }
 
+@media screen and (max-width: 1199px) {
+  .footer {
+    padding-bottom: 6rem;
+  }
+}
+
 .footer__inner {
   max-width: 860px;
   margin: 0 auto;
@@ -1114,6 +1348,10 @@ button {
 .footer .logo {
   flex: 0 0 210px;
   margin: 0 auto;
+}
+
+.footer .logo img {
+  max-width: 140px;
 }
 
 @media screen and (max-width: 991px) {
@@ -1208,6 +1446,35 @@ button {
   color: #fff;
 }
 
+.welcome-layout .main {
+  padding-top: 0;
+}
+
+.welcome-layout .header:not(.sticky):not(:hover) {
+  background: none;
+  color: #fff;
+}
+
+.welcome-layout .header:not(.sticky):not(:hover) .logo img {
+  filter: brightness(0) invert(1);
+}
+
+.welcome-layout .header:not(.sticky):not(:hover) a {
+  color: #fff;
+}
+
+.welcome-layout .header:not(.sticky):not(:hover) .dropdown-toggle {
+  color: #fff;
+}
+
+.welcome-layout .header:not(.sticky):not(:hover) .dropdown-menu .dropdown-item:not(.active) {
+  color: #000;
+}
+
+.welcome-layout .header:not(.sticky):not(:hover) .dropdown-menu .dropdown-item:not(.active):hover {
+  color: #fff;
+}
+
 .section-dark {
   background-color: #222;
   color: #fff;
@@ -1250,10 +1517,6 @@ button {
 
 .section-dark--bg {
   background: #222 url(../images/bg_clock.png) no-repeat right center;
-}
-
-.slogan {
-  max-width: 960px;
 }
 
 .reviews {

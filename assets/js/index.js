@@ -1,28 +1,26 @@
 ﻿var Main = function () {
     var initNavi = function () {
         const $header = $('.header'),
-            scrollTop = $(".scroll-top"),
-            stickyHeader = $('.header');
+            scrollTop = $(".scroll-top");
 
         let lastScrollTop = 0;
 
         $(window).on('scroll', function () {
             const st = $(this).scrollTop();
-            if (st < lastScrollTop) {
-                $header.addClass('scroll-up');
-            }
-            else {
-                $header.removeClass('scroll-up');
-            }
 
-            if (st > 200) {
-                scrollTop.addClass('shown');
-                stickyHeader.addClass('sticky');
+            if (st > 0) {
+                $header.addClass('sticky');
+                $('#sticky-bar').addClass('sticky-bar--active');
+                if (st < 120 || st < lastScrollTop) {
+                    $header.addClass('scroll-up');
+                } else {
+                    $header.removeClass('scroll-up');
+                }
             } else {
                 scrollTop.removeClass('shown');
-                stickyHeader.removeClass('sticky');
+                $header.removeClass('sticky');
+                $('#sticky-bar').removeClass('sticky-bar--active');
             }
-
             lastScrollTop = st;
         });
 
