@@ -10,12 +10,7 @@
     ul,
     ol {
         margin: 0 0 1.25rem 0;
-        padding: 0 0 0 24px;
-        overflow-y: auto;
-
-        li {
-            margin: 0 0 .25rem 0;
-        }
+        padding: 0 0 0 20px;
     }
 
     ul {
@@ -28,28 +23,9 @@
     }
 
     .h2 {
-        font-size: 1.5em;
-        font-weight: 600;
-        margin: 0 0 1rem 0;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4 {
-        margin: .5rem 0 1rem 0;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    h3 {
         font-size: 1.25em;
-    }
-
-    h4 {
-        font-size: 1.1em;
+        font-weight: 600;
+        margin: 0 0 .5rem 0;
     }
 
     .text-block {
@@ -58,24 +34,5 @@
         &:last-of-type {
             margin-bottom: 0;
         }
-    }
-
-    img {
-        max-width: 100% !important;
-
-        @include media-breakpoint('lt-md') {
-            display: block;
-            height: auto !important;
-            margin: 0 auto 2rem auto !important;
-            padding: 0 !important;
-            float: none !important;
-        }
-
-    }
-}
-
-.section-text {
-    .post {
-        max-width: 100%;
     }
 }

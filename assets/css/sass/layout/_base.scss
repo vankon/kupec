@@ -42,7 +42,7 @@ body {
 }
 
 .main {
-  min-height: calc(100vh - 224px);
+  min-height: calc(100vh - 246px);
   padding-top: $header-height;
 
   @include media-breakpoint('lt-md') {
@@ -96,79 +96,4 @@ button {
       color: $color-primary;
     }
   }
-}
-
-.btn-info {
-  width: auto;
-  height: auto;
-  background: none !important;
-  color: #fff;
-  border: none;
-  line-height: 1;
-  font-size: .6em;
-  padding: .75rem 1rem;
-  margin-left: .5rem;
-  position: relative;
-  border: 2px solid #fff;
-  border-radius: 24px;
-
-  &:hover {
-    border-color: $color-primary;
-    color: $color-primary;
-  }
-
-  &:active,
-  &:focus {
-    border-color: darken($color-primary, 15%) !important;
-    color: darken($color-primary, 15%) !important;
-  }
-}
-
-.modal#form_info {
-  .modal-dialog {
-    max-width: 960px;
-  }
-}
-
-.modal {
-  .modal-header {
-    font-size: 1.5rem;
-    font-weight: bold;
-    position: relative;
-  }
-
-  .btn-close {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    height: 32px;
-    width: 32px;
-    transition: .3s;
-    margin-top: -15px;
-
-    &:hover {
-      transform: rotate(14deg);
-    }
-
-    &:before,
-    &:after {
-      content: "";
-      display: block;
-      height: 32px;
-      width: 1px;
-      background: #000;
-      position: absolute;
-      left: 15px;
-    }
-
-    &:before {
-      transform: rotate(45deg);
-    }
-
-    &:after {
-      transform: rotate(-45deg);
-    }
-  }
-
 }

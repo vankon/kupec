@@ -1,7 +1,7 @@
 .sl {
     background: #222;
     color: #fff;
-    padding: 9rem 0 6rem 0;
+    padding: 6rem 0;
 
     @include media-breakpoint('lt-md') {
         padding: 4rem 0 10rem 0;
