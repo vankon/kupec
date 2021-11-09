@@ -1,17 +1,17 @@
 .section-dark {
-    background: #222;
-    padding: 4rem 0;
-    margin-bottom: 7rem;
+    background-color: #222;
     color: #fff;
 
     .section-heading {
         color: #fff;
         margin: 0 0 2.5rem 0;
+
+        @include media-breakpoint('lt-md') {
+            margin-bottom: 1.25rem;
+        }
     }
 
     &__text {
-        font-size: 400;
-
         p {
             margin: 0;
         }
@@ -36,15 +36,18 @@
             }
         }
     }
-}
 
-.slogan {
-    max-width: 960px;
-    margin-bottom: 4rem;
+    &--bg {
+        background: #222 url(../images/bg_clock.png)no-repeat right center;
+    }
 }
 
 .reviews {
-    margin-bottom: 7rem;
+    margin-bottom: 6rem;
+
+    @include media-breakpoint('lt-sm') {
+        margin-bottom: 4rem;
+    }
 
     &-list {
         display: flex;
@@ -68,10 +71,20 @@
             margin: 0 0 2rem 0;
         }
 
+        @include media-breakpoint('lt-sm') {
+            display: block;
+        }
+
         &__img {
             width: 100px;
             margin-right: 1.5rem;
             text-align: center;
+
+            @include media-breakpoint('lt-sm') {
+                margin-right: 0;
+                margin-bottom: 1rem;
+                text-align: left;
+            }
 
             .image-circle {
                 width: 100px;
@@ -85,7 +98,7 @@
 }
 
 .products {
-    margin-bottom: 7rem;
+    margin-bottom: 6rem;
 
     .product {
         &-list {
@@ -101,10 +114,6 @@
         &-item {
             flex: 0 0 calc(25% - 2rem);
             margin: 0 1rem 2rem 1rem;
-            text-align: center;
-            transition: .3s;
-            background: #fff;
-            border-radius: 10px;
 
             @include media-breakpoint('lt-md') {
                 flex: 0 0 calc(50% - 2rem);
@@ -114,48 +123,12 @@
                 flex: 0 0 100%;
                 margin: 0 0 2rem 0;
             }
-
-            a {
-                color: $color-text;
-                text-decoration: none !important;
-            }
-
-            &:hover {
-                box-shadow: 0px 0px 10px 2px rgba(#000, .25);
-
-                .product-item__image {
-                    img {
-                        transform: scale(1.05);
-                    }
-                }
-            }
-
-            &__image {
-                margin-bottom: 1.75rem;
-                height: 410px;
-                overflow: hidden;
-
-                img {
-                    max-width: 100%;
-                    max-height: 100%;
-                    object-fit: contain;
-                    transition: .3s;
-                }
-            }
-
-            &__body {
-                font-weight: 500;
-
-                p {
-                    margin-bottom: .5rem;
-                }
-            }
         }
     }
 }
 
 .clock-section {
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
 
     .clock-info {
         display: flex;

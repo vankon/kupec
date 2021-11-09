@@ -92,6 +92,11 @@
     line-height: 1.4;
     color: #000;
     font-weight: inherit;
+
+    &:focus {
+        outline: none;
+        border-color: $color-primary-dark;
+    }
 }
 
 
@@ -149,7 +154,7 @@
             border-left: 1px solid #fff;
             position: absolute;
             top: 50%;
-            margin-top: -4px;
+            margin-top: -5px;
             left: 3px;
             z-index: 2;
             transition: .3s;
@@ -185,6 +190,8 @@
 }
 
 .form-horizontal {
+    max-width: 500px;
+
     .dropdown {
         &-toggle {
             background: none;
@@ -232,6 +239,45 @@
     .form-baton {
         .btn {
             width: 100%;
+        }
+    }
+}
+
+.select-file {
+    overflow: hidden;
+}
+
+.form-select {
+    position: relative;
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        margin-top: -3px;
+        font-size: 16px;
+        line-height: 1;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 6px 0 6px;
+        border-color: $color-primary transparent transparent transparent;
+    }
+
+    select {
+        appearance: none;
+        width: 100%;
+        display: block;
+        border: 1px solid $color-primary;
+        border-radius: 15px;
+        padding: 1.25rem 1rem;
+        background: none;
+
+        &:focus {
+            outline: none;
+            border-color: $color-primary-dark;
         }
     }
 }
