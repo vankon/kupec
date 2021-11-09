@@ -8,6 +8,12 @@
 
     &.sticky {
         transform: translateY(-100%) translateZ(0);
+
+        .logo {
+            img {
+                max-width: 120px;
+            }
+        }
     }
 
     &.scroll-up {
@@ -21,6 +27,7 @@
 
         @include media-breakpoint('lt-lg') {
             flex-direction: row;
+            padding: 10px 0;
         }
     }
 
@@ -61,12 +68,17 @@
         order: 1;
         margin: 0 auto;
 
+        img {
+            transition: .3s;
+            max-width: 140px;
+        }
+
         @include media-breakpoint('lt-lg') {
             margin: 0;
             order: 0;
 
             img {
-                max-width: 80px;
+                max-width: 105px !important;
             }
         }
     }
