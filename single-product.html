@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>IWC Ingenieur | Часовой центр Купец</title>
+  <meta name="description" content="">
+  <link rel="icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/plugins/wow.js/animate.css" />
@@ -36,7 +38,7 @@
               </a>
             </div>
           </div>
-          <a class="link-call" href="#">Обратный звонок</a>
+          <a class="link-call" href="#" data-dismiss="modal" data-toggle="modal" data-target="#form_call">Обратный звонок</a>
           <a class="link-tel" href="tel:79284109070">+79284109070</a>
         </div>
         <nav class="navi">
@@ -72,7 +74,7 @@
           <img src="demo/clock1.png" alt="">
         </div>
         <div class="product__main">
-          <h2 class="product-name">IWC Ingenieur</h2>
+          <h1 class="product-name">h1 IWC Ingenieur</h1>
           <div class="product-code">IW323902</div>
           <div class="product-price">
             <div class="price">
@@ -208,6 +210,31 @@
     </a>
   </div>
 
+  <div class="modal fade modal-form" id="form_call" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">Заказать звонок
+          <a href="#" class="btn-close" data-dismiss="modal" aria-hidden="true"><i class="icon icon-close"></i></a>
+        </div>
+        <div class="modal-body">
+          <form action="#" class="form-horizontal">
+            <div class="form-group">
+              <label for="" class="control-label">Имя</label>
+              <input type="tel" placeholder="Ваше имя" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="" class="control-label">Телефон</label>
+              <input type="tel" placeholder="+7 964 456-78-12" class="form-control" required>
+            </div>
+            <div class="form-baton">
+              <button class="btn btn-primary" type="submit">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <script src="assets/plugins/jquery.3.4.1.min.js"></script>
   <script src="assets/plugins/popper.js/popper.min.js"></script>
   <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>

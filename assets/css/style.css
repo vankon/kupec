@@ -201,6 +201,22 @@
   background: #222;
   color: #fff;
   padding: 9rem 0 6rem 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.sl:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 @media screen and (max-width: 991px) {
@@ -215,9 +231,30 @@
   }
 }
 
+.sl .container {
+  position: relative;
+  z-index: 11;
+}
+
+.sl-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  z-index: 1;
+}
+
+.sl-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .sl-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 @media screen and (max-width: 991px) {
@@ -228,7 +265,8 @@
 
 .sl-content__info {
   padding-top: 2rem;
-  max-width: 640px;
+  text-align: center;
+  max-width: 960px;
 }
 
 @media screen and (max-width: 991px) {
@@ -1579,9 +1617,15 @@ button {
 .reviews .review-item__img .image-circle {
   width: 100px;
   height: 100px;
-  background: #C4C4C4;
   border-radius: 50%;
   margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.reviews .review-item__img .image-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .products {
@@ -1744,6 +1788,66 @@ button {
 
 .catalog .swiper-scrollbar-drag {
   background: #b980d1;
+}
+
+.catalog .product-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem 2rem -1rem;
+}
+
+@media screen and (max-width: 991px) {
+  .catalog .product-catalog {
+    margin: 0 0 2rem 0;
+  }
+}
+
+.catalog .product-catalog .product-item {
+  flex: 0 0 calc(25% - 2rem);
+  padding: .5rem;
+  margin: 0 1rem 2rem 1rem;
+}
+
+@media screen and (max-width: 1199px) {
+  .catalog .product-catalog .product-item {
+    flex: 0 0 calc(50% - 2rem);
+    margin: 0 1rem 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .catalog .product-catalog .product-item {
+    flex: 0 0 50%;
+    margin: 0 0 .6rem 0;
+  }
+}
+
+.pagination {
+  margin: 0 0 2rem 0;
+  justify-content: center;
+}
+
+.pagination a {
+  text-decoration: none;
+  transition: .2s;
+  color: #000;
+  min-width: 24px;
+  height: 24px;
+  display: inline-block;
+  padding: .25rem .5rem;
+  font-size: .9em;
+  line-height: 1;
+  margin: 0 .25rem;
+}
+
+.pagination a.active {
+  background: #b980d1;
+  color: #fff;
+}
+
+.pagination a:hover {
+  background: #b980d1;
+  color: #fff;
 }
 
 .product {

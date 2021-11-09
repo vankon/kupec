@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Часовой центр Купец</title>
+  <meta name="description" content="">
+  <link rel="icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/plugins/wow.js/animate.css" />
@@ -36,7 +38,8 @@
               </a>
             </div>
           </div>
-          <a class="link-call" href="#">Обратный звонок</a>
+          <a class="link-call" href="#" data-dismiss="modal" data-toggle="modal" data-target="#form_call">Обратный
+            звонок</a>
           <a class="link-tel" href="tel:79284109070">+79284109070</a>
         </div>
         <nav class="navi">
@@ -78,10 +81,12 @@
             <a class="wow fadeInUp" href="#" data-dismiss="modal" data-toggle="modal" data-target="#form_call">Заказать
               звонок</a>
           </div>
-          <div class="sl-content__img wow fadeInDown">
-            <img src="demo/sl1.png" alt="">
-          </div>
         </div>
+      </div>
+      <div class="sl-video">
+        <video autoplay muted loop>
+          <source src="demo/video.webm" type="video/mp4">
+        </video>
       </div>
     </div>
     <section class="order">
@@ -89,8 +94,9 @@
         <div class="row">
           <div class="col-lg-7">
             <div class="order-slogan">
-              <h2 class="section-heading">Мы <strong>покупаем часы</strong> по высоким ценам и полной конфиденциальности
-              </h2>
+              <h1 class="section-heading">h1 Мы <strong>покупаем часы</strong> по высоким ценам и полной
+                конфиденциальности
+              </h1>
               <div class="order-slogan__text">
                 Перед продажей часов воспользуйтесь услугой online-оценки. Для этого заполните специальную форму на
                 сайте,
@@ -235,7 +241,7 @@
         <div class="reviews-list">
           <div class="review-item wow fadeInUp">
             <div class="review-item__img">
-              <div class="image-circle"></div>
+              <div class="image-circle"><img src="demo/ava2.png" alt=""></div>
               <p>Иван</p>
             </div>
             <div class="review-item__body">
@@ -245,7 +251,7 @@
           </div>
           <div class="review-item wow fadeInUp">
             <div class="review-item__img">
-              <div class="image-circle"></div>
+              <div class="image-circle"><img src="demo/ava3.png" alt=""></div>
               <p>Иван</p>
             </div>
             <div class="review-item__body">
@@ -537,7 +543,8 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">Заказать звонок
-          <a href="#" class="btn-close" data-dismiss="modal" aria-hidden="true"><i class="icon icon-close"></i></a></div>
+          <a href="#" class="btn-close" data-dismiss="modal" aria-hidden="true"><i class="icon icon-close"></i></a>
+        </div>
         <div class="modal-body">
           <form action="#" class="form-horizontal">
             <div class="form-group">
