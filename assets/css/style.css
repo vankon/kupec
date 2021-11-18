@@ -240,6 +240,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
   min-width: 100%;
   min-height: 100%;
   display: flex;
@@ -622,6 +623,41 @@
 
 .select-file {
   overflow: hidden;
+}
+
+.form-select {
+  position: relative;
+}
+
+.form-select:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -3px;
+  font-size: 16px;
+  line-height: 1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: #b980d1 transparent transparent transparent;
+}
+
+.form-select select {
+  appearance: none;
+  width: 100%;
+  display: block;
+  border: 1px solid #b980d1;
+  border-radius: 15px;
+  padding: 1.25rem 1rem;
+  background: none;
+}
+
+.form-select select:focus {
+  outline: none;
+  border-color: #a45bc3;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1359,12 +1395,6 @@ button {
   }
   .footer-contacts > a {
     margin: 0 1rem;
-  }
-}
-
-@media screen and (max-width: 766px) {
-  .footer-contacts .link-call {
-    display: none;
   }
 }
 

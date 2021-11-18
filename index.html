@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="assets/plugins/wow.js/animate.css" />
   <link rel="stylesheet" href="assets/plugins/swiper/css/swiper.css" />
 
-  <link rel="stylesheet" href="assets/css/style.css?v=2.0.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 
 </head>
 
@@ -116,25 +116,13 @@
             <form action="#" class="form-horizontal wow fadeInUp">
               <div class="form-group">
                 <label for="" class="control-label">Бренд</label>
-                <div class="dropdown">
-                  <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    <span data-type="value">Alain Silberstein</span>
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#" data-element="dropdownItem" data-value="1">
-                      Alain Silberstein1
-                    </a>
-                    <a class="dropdown-item active" href="#" data-element="dropdownItem" data-value="2">
-                      Alain Silberstein
-                    </a>
-                    <a class="dropdown-item" href="#" data-element="dropdownItem" data-value="3">
-                      Alain Silberstein2
-                    </a>
-                    <a class="dropdown-item" href="#" data-element="dropdownItem" data-value="4">
-                      Alain Silberstein13
-                    </a>
-                  </div>
+                <div class="form-select">
+                  <select>
+                    <option selected>Alain Silberstein</option>
+                    <option value="1">Alain Silberstein 1</option>
+                    <option value="2">Alain Silberstein 2</option>
+                    <option value="3">Alain Silberstein 3</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group">
@@ -432,7 +420,7 @@
             </div>
           </div>
           <p>Плотников переулок 21с1</p>
-          <a class="link-call" href="#">Обратный звонок</a>
+          <a class="link-call" href="#" data-dismiss="modal" data-toggle="modal" data-target="#form_call">Обратный звонок</a>
           <a class="link-tel" href="tel:79284109070">+79284109070</a>
         </div>
       </div>

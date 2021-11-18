@@ -33,12 +33,6 @@
             }
         }
 
-        @include media-breakpoint('lt-sm') {
-            .link-call {
-                display: none;
-            }
-        }
-
         p {
             font-size: 17px;
             color: #fff;
