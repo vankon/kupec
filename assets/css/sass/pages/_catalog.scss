@@ -11,7 +11,10 @@
     &__filters {
         display: flex;
         align-items: center;
-        margin-bottom: 5rem;
+
+        @include media-breakpoint('lt-md') {
+            margin-bottom: 2rem;
+        }
 
         .filter-label {
             margin-right: 2rem;
